@@ -51,3 +51,11 @@ rm -rf app
 # copy your app over
 cp -R ../my-old-remix-app/app app
 ```
+
+
+# TO DO
+
+* Create a form with input to add habits
+* Save habits
+* Delete habits
+* Some form of calendar 
