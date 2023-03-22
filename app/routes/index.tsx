@@ -1,30 +1,8 @@
-import {
-  Form,
-  useActionData,
-  useLoaderData,
-  useSearchParams,
-} from "@remix-run/react";
+import { Form, useLoaderData } from "@remix-run/react";
 import type { ActionFunction, LoaderFunction } from "@remix-run/server-runtime";
 import { json } from "@remix-run/server-runtime";
-import { redirect } from "@remix-run/node";
 import { db } from "~/utils/db.server";
 import type { Habit } from "@prisma/client";
-/*export const action: ActionFunction = async ({ request }) => {
-  const formData = await request.formData();
-  const Habit = formData.get("habit");
-  //console.log("habit", Habit);
-  // redirect("/");
-  return Habit;
-};
-
-export const loader: LoaderFunction = async ({ request }) => {
-  const url = new URL(request.url);
-  //const search = new URLSearchParams(url.search);
-  //console.log(url);
-  const habit = url.searchParams.getAll("habit");
-  //console.log(habit);
-  return json(habit);
-};*/
 
 export const action: ActionFunction = async ({ request }) => {
   const data = await request.formData();
@@ -53,8 +31,6 @@ export const loader: LoaderFunction = async () => {
 
 export default function Index() {
   const data = useLoaderData<Habit[]>();
-
-  console.log(data);
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <Form replace method="post">
@@ -63,12 +39,12 @@ export default function Index() {
           name="habit"
           type="habit"
           id="habit"
-          className="rounded-md border shadow-sm bg-white px-2 py-3"
+          className="rounded-md border shadow-sm bg-white px-2 py-1"
           required
         />
         <button
           type="submit"
-          className="rounded-md border border-blue-500 bg-blue-500 text-white px-2 py-3"
+          className="rounded-md border border-blue-500 bg-blue-500 text-white px-2 py-1"
         >
           Add habit
         </button>
@@ -77,7 +53,12 @@ export default function Index() {
         <li key={habits.id}>
           <p>{habits.habit}.</p>
           <form method="delete" action={`/habits/${habits.id}`}>
-            <button type="submit">Delete habit</button>
+            <button
+              type="submit"
+              className="rounded-md border border-red-500 bg-red-500 text-white px-1 py-1"
+            >
+              Delete habit
+            </button>
           </form>
         </li>
       ))}
