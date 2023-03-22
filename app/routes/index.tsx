@@ -59,8 +59,19 @@ export default function Index() {
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <Form replace method="post">
         <label htmlFor="Name">Name</label>
-        <input name="habit" type="habit" id="habit" required />
-        <button type="submit">Add habit</button>
+        <input
+          name="habit"
+          type="habit"
+          id="habit"
+          className="rounded-md border shadow-sm bg-white px-2 py-3"
+          required
+        />
+        <button
+          type="submit"
+          className="rounded-md border border-blue-500 bg-blue-500 text-white px-2 py-3"
+        >
+          Add habit
+        </button>
       </Form>
       {data.map((habits) => (
         <li key={habits.id}>
