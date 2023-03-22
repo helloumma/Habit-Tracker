@@ -11,7 +11,7 @@
 - React
 - Remix
 - TypeScript
-- Tailwin
+- TailwindCSS
 
 ### 🔧How to Run the App
 
