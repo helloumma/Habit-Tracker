@@ -12,6 +12,7 @@
 - Remix
 - TypeScript
 - TailwindCSS
+- Prisma
 
 ### 🔧How to Run the App
 
