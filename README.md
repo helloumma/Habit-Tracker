@@ -23,6 +23,6 @@
 
 - Add a calendar option to set habits for specific days
 - Allow user to get updates for habits (like reminders app)
-- Tesitng with Playwright
+- Testing with Playwright
 
 **PROJECT WORK IN PROGRESS**
