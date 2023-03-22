@@ -1,61 +1,28 @@
-# Welcome to Remix!
+# 🗓️Habit Tracker
 
-- [Remix Docs](https://remix.run/docs)
+### 📋Aims of App
 
-## Development
+- Allow user to add a habit
+- User should be able to delete a habits
+- All data is saved in database via Prisma
 
-From your terminal:
+### 👩‍💻Technical Details
 
-```sh
-npm run dev
-```
+- React
+- Remix
+- TypeScript
+- Tailwin
 
-This starts your app in development mode, rebuilding assets on file changes.
+### 🔧How to Run the App
 
-## Deployment
+- Clone the repo
+- `cd` into the directory
+- Run `npm i` and then `npm run dev` in the terminal
 
-First, build your app for production:
+### 💭Future Improvements
 
-```sh
-npm run build
-```
+- Add a calendar option to set habits for specific days
+- Allow user to get updates for habits (like reminders app)
+- Tesitng with Playwright
 
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
-
-### Using a Template
-
-When you ran `npx create-remix@latest` there were a few choices for hosting. You can run that again to create a new project, then copy over your `app/` folder to the new project that's pre-configured for your target server.
-
-```sh
-cd ..
-# create a new project, and pick a pre-configured host
-npx create-remix@latest
-cd my-new-remix-app
-# remove the new project's app (not the old one!)
-rm -rf app
-# copy your app over
-cp -R ../my-old-remix-app/app app
-```
-
-
-# TO DO
-
-* Create a form with input to add habits
-* Save habits
-* Delete habits
-* Some form of calendar 
+**PROJECT WORK IN PROGRESS**
